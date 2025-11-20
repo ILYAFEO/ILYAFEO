@@ -1,0 +1,175 @@
+/* Общие стили для страницы */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    color: #333;
+}
+
+/* Стили шапки */
+.header {
+    background-color: #f0f0f0;
+    padding: 10px 20px;
+    border-bottom: 1px solid #ddd;
+}
+
+.header nav {
+    float: right;
+}
+
+.header a {
+    display: inline-block;
+    margin-left: 15px;
+    text-decoration: none;
+    color: #333;
+    font-size: 14px;
+}
+
+.header a:hover {
+    color: #007bff;
+}
+
+/* Стили таблицы */
+main {
+    padding: 20px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+}
+
+caption {
+    font-size: 1.5em;
+    font-weight: bold;
+    margin-bottom: 15px;
+    text-align: left;
+    color: #2c3e50;
+}
+
+/* Заголовки столбцов и разные цвета */
+th {
+    padding: 12px;
+    text-align: left;
+    border: 1px solid #ccc;
+    color: white;
+    font-weight: normal;
+}
+
+th:nth-child(1)  { background-color: #3498db; } /* ID — голубой */
+th:nth-child(2)  { background-color: #e74c3c; } /* ФИО — красный */
+th:nth-child(3)  { background-color: #9b59b6; } /* № зачётной книжки — фиолетовый */
+th:nth-child(4)  { background-color: #16a085; } /* № группы — зелёный */
+th:nth-child(5)  { background-color: #f39c12; } /* Пол — оранжевый */
+th:nth-child(6)  { background-color: #d35400; } /* Возраст — тёмно‑оранжевый */
+th:nth-child(7)  { background-color: #2980b9; } /* Форма поступления — голубой */
+th:nth-child(8)  { background-color: #8e44ad; } /* Направление — фиолетовый */
+
+
+/* Ячейки тела таблицы */
+td {
+    padding: 12px;
+    text-align: left;
+    border: 1px solid #ddd;
+}
+
+tr:nth-child(odd) {
+    background-color: #ecf0f1; /* Светло‑серый для нечётных */
+}
+
+tr:nth-child(even) {
+    background-color: #dfe4ea; /* Светлее для чётных */
+}
+
+tr:hover {
+    background-color: #c8d6e5 !important; /* Мягкий синий при наведении */
+    transition: background-color 0.3s;
+}
+
+/* Индивидуальные цвета для определённых столбцов в теле таблицы */
+/* М — голубой, Ж — розовый */
+td:nth-child(5):contains("М") {
+    color: white;
+    background-color: #3498db;
+    font-weight: bold;
+}
+td:nth-child(5):contains("Ж") {
+    color: white;
+    background-color: #e83e8c;
+    font-weight: bold;
+}
+
+/* Цвета для столбца «Форма поступления» */
+/* Бюджет — зелёный, Платно — жёлтый, Целевое — оранжевый */
+td:nth-child(7):contains("Бюджет") {
+    background-color: #27ae60;
+    color: white;
+    font-weight: bold;
+}
+td:nth-child(7):contains("Платно") {
+    background-color: #f1c40f;
+    color: black;
+    font-weight: bold;
+}
+td:nth-child(7):contains("Целевое") {
+    background-color: #e67e22;
+    color: white;
+    font-weight: bold;
+}
+
+
+
+/* Стили для формы */
+.form-container {
+    background-color: #f9f9f9;
+    padding: 20px;
+    border-radius: 8px;
+    margin-bottom: 20px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.form-container h2 {
+    margin-top: 0;
+    color: #333;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+    color: #555;
+}
+
+.form-group input,
+.form-group select {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+.form-group input:focus,
+.form-group select:focus {
+    border-color: #007bff;
+    outline: none;
+}
+
+button {
+    background-color: #007bff;
+    color: white;
+    padding: 12px 24px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
